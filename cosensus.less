@@ -1,0 +1,687 @@
+/* CSS pre-processing by {less}. http://lesscss.org/
+***************************************************/
+
+:root{
+    --co_textprimary: #333d47;
+    --co_primary: #ffd100;
+    --co_primaryhighlight: #f38a00;
+    --co_primaryhighlightdark: #f58b1f;
+    --background_grey: #e3e3e3;
+    --co_textsecondary: #848484;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------- <Jumbrotron> ---------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+#jumbo {
+    position:relative;
+    bottom:0;
+    width:100%;
+    height:630px;   /* Height of the footer */
+ }
+
+ .jumbo-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    width: 100%;
+}
+
+.jumbo_element {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    color: var(--co_textprimary);
+    font-size: 15pt;
+    text-align: center;
+    font-family: gothambold;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.title-container {
+    color: #FFFFFF;
+    margin: auto;
+    width: auto;
+    // border: 5px solid white;
+    padding: 10px;
+    grid-column: 1;
+    grid-row: 1;
+    font-family: gotham;
+    font-size: 24.5pt;
+    position: relative;
+}
+
+#jumbo-img {
+    width:100%;
+    height:650px;
+    padding: 10px 0px;
+    opacity: 0.35;
+    display: block;
+}
+
+.jumbo-title--img {
+    opacity: 1;
+    width: 595px;
+    padding: 10px 0px;
+}
+
+.jumbo-title--altimg {
+    display: block;
+    height: 100%;
+}
+
+//<Jumbo>
+
+#custom-jumbo {
+    position: relative;
+    height: 630px;
+    display: grid;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------- </Jumbrotron> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+#small-spacer {
+    height: 10px;
+}
+
+#contact-clogo-img {
+    display: none;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- <Media Queries> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+@media only screen and (max-width: 1000px) {
+    // body {
+    //     background-color: lightblue;
+    // }
+
+    .jumbotron {
+        height: 400px;
+    }
+}
+
+//When screen is >1000px
+@media only screen and (min-width: 1000px) { 
+    #jumbo-title--img { display: block; }
+    #jumbo-title--altimg { display: none; }
+    #wide-container { width: 80%; }
+    #youtube-video {
+        width: 70%;
+        margin: auto;
+    }
+    #title-text { text-align: left; }
+
+    .contact-grid-container {
+        position: relative;
+        display: grid;
+        // background-color: #f38a00;
+        // height: 545px;
+        width: 100%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto 45px 45px 45px 210px;
+        grid-gap: 30px 0px;
+        grid-template-areas: "contact-description contact-image . ." "contact-name contact-image . ." "contact-email contact-image . ." "contact-subject contact-image . ." "contact-message contact-message . .";
+    }
+
+    #contact-clogo-img {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1000px) { 
+    #jumbo-title--img { display: none; }
+    #jumbo-title--altimg { display: block; }
+    #wide-container { width: 90%; }
+    #youtube-video {
+        width: 85%;
+        margin: auto;
+    }
+    #title-text { text-align: center; }
+
+    .contact-grid-container {
+        position: relative;
+        display: grid;
+        // background-color: #f38a00;
+        // height: 570px;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 45px 45px 45px 150px;
+        grid-gap: 30px 0px;
+        grid-template-areas: "contact-description . . ." "contact-name . . ." "contact-email . . ." "contact-subject . . ." "contact-message . . .";
+    }
+
+    #contact-clogo-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    #jumbo-title--img { display: none; }
+    #jumbo-title--altimg { display: block; } 
+    #youtube-video {
+        width: 100%;
+        margin: auto;
+    }
+    #title-text { text-align: center; }
+
+    .contact-grid-container {
+        position: relative;
+        display: grid;
+        // background-color: #f38a00;
+        // height: 545px;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 45px 45px 45px 150px;
+        grid-gap: 30px 0px;
+        grid-template-areas: "contact-description . . ." "contact-name . . ." "contact-email . . ." "contact-subject . . ." "contact-message . . .";
+    }
+
+    #contact-clogo-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #wide-container { width: 100%; }
+    .jumbotron { height: 300px; }
+
+    .contact-grid-container {
+        position: relative;
+        display: grid;
+        // background-color: #f38a00;
+        // height: 595px;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 45px 45px 45px 150px;
+        grid-gap: 30px 0px;
+        grid-template-areas: "contact-description . . ." "contact-name . . ." "contact-email . . ." "contact-subject . . ." "contact-message . . .";
+    }
+
+    #contact-clogo-img {
+        display: none;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- </Media Queries> -------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+.banner_element {
+    grid-column: 1;
+    grid-row: 1;
+    position: absolute;
+}
+
+
+
+//</Jumbo>
+
+.mini-container {
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------ <General Styling> -------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+    background: var(--co_primaryhighlight);
+    background-color: var(--co_primaryhighlight);
+    background-image: linear-gradient(to top, var(--co_primaryhighlightdark), var(--co_primaryhighlight));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: gotham;
+    font-size: 17px;
+    color: var(--co_textsecondary);
+ }
+
+ strong {
+     color: var(--co_textprimary);
+     font-family: gothambold;
+ }
+
+ h1 {
+     font-family: gotham;
+     color: var(--co_textprimary);
+ }
+
+ h3 {
+    font-family: gothambold;
+    color: var(--co_textprimary);
+    font-size: 21px;
+}
+
+//Hyperlink Styling
+a:link {
+    color: #333d47; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: #333d47;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffd100;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #f38a00;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//----------------------------------------------- </General Styling> -------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- <Gradients> ------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//Gradients
+ .cos-grad-lr {
+    height: 650px;
+    background-color: var(--co_primary); /* For browsers that do not support gradients */
+    // background-image: linear-gradient(to right, var(--co_primary), var(--co_primaryhighlight)); /* Standard syntax (must be last) */
+}
+
+.cos-grad-rl {
+    height: 650px;
+    background-color: var(--co_primary); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, var(--co_primary), var(--co_primaryhighlight));
+}
+
+.cos-grad-tb {
+    height: 650px;
+    background-color: var(--co_primary); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom, var(--co_primary), var(--co_primaryhighlight));
+}
+
+.cos-grad-bt {
+    height: 650px;
+    background-color: var(--co_primary); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top, var(--co_primary), var(--co_primaryhighlight));
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- </Gradients> -----------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------- <Footer> ------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+#footer {
+    position:relative;
+    bottom:0;
+    width:100%;
+    height:150px;   /* Height of the footer */
+ }
+
+.footer_element {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    color: var(--co_textprimary);
+    font-size: 15pt;
+    text-align: center;
+    font-family: gothambold;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.footer-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    width: 100%;
+    height: 150;
+}
+
+.footer_attributes {
+    color: #333d47;
+    position: absolute;
+    text-align: center;
+    font-size: 10pt;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------- </Footer> ------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------- <Fonts> --------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//Gotham Regular
+@font-face {
+    font-family: 'gotham';
+    src: url('/assets/fonts/gothambookregular.otf'), url('/assets/fonts/gothambookregular.ttf');
+}
+
+//Gotham Bold
+@font-face {
+    font-family: 'gothambold';
+    src:
+    url('/assets/fonts/gothamboldregular.ttf');
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------------- </Fonts> --------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+// .body-content {
+//     padding-left: 10%;
+//     padding-right: 10%;
+//     color: var(--co_textsecondary);
+//     // font-size: 16px;
+// }
+
+.text__highlighted {
+    color: var(--co_textprimary);
+    font-family: gothambold;
+}
+
+#intro-section {
+    background: white;
+}
+
+#testimonial-section {
+    background: var(--background_grey);
+}
+
+#features-section {
+    background: white;
+}
+
+#contact-section {
+    background: var(--background_grey);
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- <Youtube Video> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+// #youtube-video {
+//     width: 70%;
+//     margin: auto;
+// }
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+    height: 0;
+    background: #333d47;
+    text-align: center;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------ </Youtube Video> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------ <Icon Frame Img> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+// //Svg image fill
+.feature-box-icon {
+    fill: #FFFFFF;
+}
+
+.tile-image-wrapper {
+    position: relative;
+    background-color: transparent;
+    height: 100px;
+    width: 100%;
+    display: grid;
+}
+
+// //View for the svg image (so it is centered & smaller)
+.tile-image-container {
+    height: 100px;
+    width: 100px;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+// //Sizing for svg image
+.tile-image-container svg {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.tile-image-element-wrapper img {
+    width: inherit;
+    height: inherit;
+}
+
+.tile-image-element-wrapper {
+    position: grid;
+    top: 0;
+    left: 0;
+}
+
+.tile-image-element {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+//Rounded circle with gradient
+.tile-circle {
+    height: 100px;
+    width: 100px;
+    background-color: var(--co_primary);
+    background-image: linear-gradient(to bottom, var(--co_primary), var(--co_primaryhighlight));
+    border-radius: 50%;
+    display: inline-block;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//----------------------------------------------- </Icon Frame Img> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- <Testimonials> ---------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+.testimonial-cell-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    // width: 100%;
+    // height: 100%;
+}
+
+.testimonial-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    max-height: 250px;
+    max-width: 250px;;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------ </Testimonials> ---------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------------- <Contact Form> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+.contact--bold {
+    font-family: gothambold;
+}
+
+// .contact-grid-container {
+//     position: relative;
+//     display: grid;
+//     // background-color: #f38a00;
+//     height: 100%;
+//     width: 100%;
+//     grid-template-columns: 50% 50%;
+//     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+//     grid-gap: 30px 0px;
+//     grid-template-areas: "contact-description contact-image . ." 
+//     "contact-name contact-image . ." 
+//     "contact-email contact-image . ." 
+//     "contact-subject contact-image . ." 
+//     "contact-message contact-message . .";
+// }
+
+.contact-description { 
+    grid-area: contact-description;
+}
+
+.contact-name { 
+    grid-area: contact-name;
+}
+
+.contact-email { 
+    grid-area: contact-email; 
+}
+
+.contact-subject { 
+    grid-area: contact-subject; 
+}
+
+.contact-image { 
+    grid-area: contact-image;
+    position: relative;
+}
+
+.contact-message { 
+    grid-area: contact-message;
+}
+
+.contact-textentry {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 45px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #c8c8c8;
+    border-color: #c8c8c8;
+    padding: 0px 10px;
+    font-family: gotham;
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    resize: none;
+}
+
+.contact-textentry:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #c8c8c8;
+}
+
+#contact-name-box {
+    background-color: #FFFFFF;
+}
+
+#contact-email-box {
+    background-color: #FFFFFF;
+}
+
+#contact-subject-box {
+    background-color: #FFFFFF;
+}
+
+#contact-message-box {
+    padding: 10px 10px;
+    height: 200px;
+}
+
+input[type=submit] {
+    border-radius: 10px;
+    border: 0;
+    width: 100px;
+    height:50px;
+    font-family: Tahoma;
+    background: var(--co_textprimary);
+    color: white;
+    font-family: gotham;
+    font-size: 16px;
+}
+
+input[type=submit]:active {
+    background: linear-gradient(to bottom, var(--co_primary) 1%, var(--co_primaryhighlight) 100%);
+    outline: none;
+    box-shadow: 0px 0px 10px var(--co_textprimary);
+}
+
+input[type=submit]:focus {
+    outline: none;
+}
+
+.clogo-img-box { 
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    right: 0;
+    top: 0;
+}
+
+#contact-clogo-img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- </Contact Form> --------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
