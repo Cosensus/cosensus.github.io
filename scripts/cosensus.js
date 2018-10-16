@@ -67,7 +67,7 @@ function validateAndSendEmail() {
     }    
 }
 
-var targetEmail = "cosensus@gmail.com";
+var targetEmail = "sales@palladient.com";
 
 function sendEmail(subject, message, targetEmail) {
 
