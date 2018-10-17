@@ -343,17 +343,22 @@ a:active {
     height:150px;   /* Height of the footer */
  }
 
-.footer_element {
-    grid-column: 1;
+ #footer_icons {
+    font-size: 10pt;
+ }
+
+ #footer-grad {
+    height: 150px;
+    background: var(--co_primary);
     grid-row: 1;
-    position: relative;
+    grid-column: 1;
+ }
+
+.footer_element {
     color: var(--co_textprimary);
     font-size: 15pt;
     text-align: center;
     font-family: gothambold;
-    align-content: center;
-    align-self: center;
-    align-items: center;
 }
 
 .footer-container {
@@ -365,15 +370,25 @@ a:active {
     height: 150;
 }
 
-.footer_attributes {
-    color: #333d47;
-    position: absolute;
-    text-align: center;
-    font-size: 10pt;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.footer-text-container {
+    margin-top: 10px;
+    grid-row: 1;
+    grid-column: 1;
 }
+
+.footer-grid {
+    display: grid;
+}
+
+// .footer_attributes {
+//     color: #333d47;
+//     position: absolute;
+//     text-align: center;
+//     font-size: 10pt;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+// }
 
 //--------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------------------- </Footer> ------------------------------------------------------//
