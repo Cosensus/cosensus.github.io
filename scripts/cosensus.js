@@ -23,8 +23,9 @@ function isNullOrEmpty(str){
             }
         }
     }
-    catch
+    catch (ex)
     {
+        console.log(ex.message);
         return false;
     }
 }
